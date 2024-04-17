@@ -47,58 +47,58 @@ def convert_doc_to_txt(input_dir, output_dir):
         print(txt_filename)
         ## if file name contains level and input or output
             
-        if txt_filename.find('basic') != -1 and txt_filename.find('input') != -1:
-            txt_filename = 'Basic_input_'+str(name_count[0])
-            name_count[0]+=1
-        if txt_filename.find('basic') != -1 and txt_filename.find('output') != -1:
-            txt_filename = 'Basic_output_'+str(name_count[1])
-            name_count[1]+=1
-        if txt_filename.find('boundary') != -1 and txt_filename.find('input') != -1:
-            txt_filename = 'Boundary_input_'+str(name_count[2])
-            name_count[2]+=1
-        if txt_filename.find('boundary') != -1 and txt_filename.find('output') != -1:
-            txt_filename = 'Boundary_output_'+str(name_count[3])
-            name_count[3]+=1
-        if txt_filename.find('corner') != -1 and txt_filename.find('input') != -1:
-            txt_filename = 'Corner_input_'+str(name_count[4])
-            name_count[4]+=1
-        if txt_filename.find('corner') != -1 and txt_filename.find('output') != -1:
-            txt_filename = 'Corner_output_'+str(name_count[5])
-            name_count[5]+=1
-        if txt_filename.find('edge') != -1 and txt_filename.find('input') != -1:
-            txt_filename = 'Edge_input_'+str(name_count[6])
-            name_count[6]+=1
-        if txt_filename.find('edge') != -1 and txt_filename.find('output') != -1:
-            txt_filename = 'Edge_output_'+str(name_count[7])
-            name_count[7]+=1
+        # if txt_filename.find('basic') != -1 and txt_filename.find('input') != -1:
+        #     txt_filename = 'Basic_input_'+str(name_count[0])
+        #     name_count[0]+=1
+        # if txt_filename.find('basic') != -1 and txt_filename.find('output') != -1:
+        #     txt_filename = 'Basic_output_'+str(name_count[1])
+        #     name_count[1]+=1
+        # if txt_filename.find('boundary') != -1 and txt_filename.find('input') != -1:
+        #     txt_filename = 'Boundary_input_'+str(name_count[2])
+        #     name_count[2]+=1
+        # if txt_filename.find('boundary') != -1 and txt_filename.find('output') != -1:
+        #     txt_filename = 'Boundary_output_'+str(name_count[3])
+        #     name_count[3]+=1
+        # if txt_filename.find('corner') != -1 and txt_filename.find('input') != -1:
+        #     txt_filename = 'Corner_input_'+str(name_count[4])
+        #     name_count[4]+=1
+        # if txt_filename.find('corner') != -1 and txt_filename.find('output') != -1:
+        #     txt_filename = 'Corner_output_'+str(name_count[5])
+        #     name_count[5]+=1
+        # if txt_filename.find('edge') != -1 and txt_filename.find('input') != -1:
+        #     txt_filename = 'Edge_input_'+str(name_count[6])
+        #     name_count[6]+=1
+        # if txt_filename.find('edge') != -1 and txt_filename.find('output') != -1:
+        #     txt_filename = 'Edge_output_'+str(name_count[7])
+        #     name_count[7]+=1
 
-        # if file name contains level and solution
-        if txt_filename.find('basic') != -1 and txt_filename.find('solution') != -1:
-            txt_filename = 'Basic_output_'+str(name_count[1])
-            name_count[1]+=1
-        if txt_filename.find('boundary') != -1 and txt_filename.find('solution') != -1:
-            txt_filename = 'Boundary_output_'+str(name_count[3])
-            name_count[3]+=1
-        if txt_filename.find('corner') != -1 and txt_filename.find('solution') != -1:
-            txt_filename = 'Corner_output_'+str(name_count[5])
-            name_count[5]+=1
-        if txt_filename.find('edge') != -1 and txt_filename.find('solution') != -1:
-            txt_filename = 'Edge_output_'+str(name_count[7])
-            name_count[7]+=1
+        # # if file name contains level and solution
+        # if txt_filename.find('basic') != -1 and txt_filename.find('solution') != -1:
+        #     txt_filename = 'Basic_output_'+str(name_count[1])
+        #     name_count[1]+=1
+        # if txt_filename.find('boundary') != -1 and txt_filename.find('solution') != -1:
+        #     txt_filename = 'Boundary_output_'+str(name_count[3])
+        #     name_count[3]+=1
+        # if txt_filename.find('corner') != -1 and txt_filename.find('solution') != -1:
+        #     txt_filename = 'Corner_output_'+str(name_count[5])
+        #     name_count[5]+=1
+        # if txt_filename.find('edge') != -1 and txt_filename.find('solution') != -1:
+        #     txt_filename = 'Edge_output_'+str(name_count[7])
+        #     name_count[7]+=1
 
-        # if file name only contains level but has its corresponding output ready
-        if txt_filename.find('basic') != -1 and name_count[1]==4:
-            txt_filename = 'Basic_input_'+str(name_count[0])
-            name_count[0]+=1
-        if 'boundary' in txt_filename and name_count[3]==2:
-            txt_filename = 'Boundary_input_'+str(name_count[2])
-            name_count[2]+=1
-        if 'corner' in txt_filename and name_count[5]==2:
-            txt_filename = 'Corner_input_'+str(name_count[4])
-            name_count[4]+=1
-        if 'edge' in txt_filename and name_count[7]==2:
-            txt_filename = 'Edge_input_'+str(name_count[6])
-            name_count[6]+=1
+        # # if file name only contains level but has its corresponding output ready
+        # if txt_filename.find('basic') != -1 and name_count[1]==4:
+        #     txt_filename = 'Basic_input_'+str(name_count[0])
+        #     name_count[0]+=1
+        # if 'boundary' in txt_filename and name_count[3]==2:
+        #     txt_filename = 'Boundary_input_'+str(name_count[2])
+        #     name_count[2]+=1
+        # if 'corner' in txt_filename and name_count[5]==2:
+        #     txt_filename = 'Corner_input_'+str(name_count[4])
+        #     name_count[4]+=1
+        # if 'edge' in txt_filename and name_count[7]==2:
+        #     txt_filename = 'Edge_input_'+str(name_count[6])
+        #     name_count[6]+=1
         
         if txt_filename == 'basic1':
             txt_filename = 'Basic_input_1'
