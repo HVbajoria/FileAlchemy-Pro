@@ -22,6 +22,8 @@ def convert_doc_to_txt(input_dir, output_dir):
 
     # Get a list of all files in the input directory
     files = os.listdir(input_dir)
+    # Sort the files list
+    files.sort()
 
     # Iterate over the files and convert .doc and .docx files to .txt
     for file in files:
