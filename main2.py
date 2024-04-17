@@ -41,7 +41,63 @@ def convert_doc_to_txt(input_dir, output_dir):
         # Create the output .txt file path
         txt_filename = os.path.splitext(file)[0].lower()
         txt_filename = txt_filename.replace(" ", "")
+        name_count =[1,1,1,1,1,1,1,1]
         print(txt_filename)
+
+        ## if file name contains level and input or output
+        if txt_filename.contains('basic') & txt_filename.contains('input'):
+            txt_filename = 'Basic_input_'+str(name_count[0])
+            name_count[0]+=1
+        if txt_filename.contains('basic') & txt_filename.contains('output'):
+            txt_filename = 'Basic_output_'+str(name_count[1])
+            name_count[1]+=1
+        if txt_filename.contains('boundary') & txt_filename.contains('input'):
+            txt_filename = 'Boundary_input_'+str(name_count[2])
+            name_count[2]+=1
+        if txt_filename.contains('boundary') & txt_filename.contains('output'):
+            txt_filename = 'Boundary_output_'+str(name_count[3])
+            name_count[3]+=1
+        if txt_filename.contains('corner') & txt_filename.contains('input'):
+            txt_filename = 'Corner_input_'+str(name_count[4])
+            name_count[4]+=1
+        if txt_filename.contains('corner') & txt_filename.contains('output'):
+            txt_filename = 'Corner_output_'+str(name_count[5])
+            name_count[5]+=1
+        if txt_filename.contains('edge') & txt_filename.contains('input'):
+            txt_filename = 'Edge_input_'+str(name_count[6])
+            name_count[6]+=1
+        if txt_filename.contains('edge') & txt_filename.contains('output'):
+            txt_filename = 'Edge_output_'+str(name_count[7])
+            name_count[7]+=1
+
+        # if file name contains level and solution
+        if txt_filename.contains('basic') & txt_filename.contains('solution'):
+            txt_filename = 'Basic_output_'+str(name_count[1])
+            name_count[1]+=1
+        if txt_filename.contains('boundary') & txt_filename.contains('solution'):
+            txt_filename = 'Boundary_output_'+str(name_count[3])
+            name_count[3]+=1
+        if txt_filename.contains('corner') & txt_filename.contains('solution'):
+            txt_filename = 'Corner_output_'+str(name_count[5])
+            name_count[5]+=1
+        if txt_filename.contains('edge') & txt_filename.contains('solution'):
+            txt_filename = 'Edge_output_'+str(name_count[7])
+            name_count[7]+=1
+
+        # if file name only contains level but has its corresponding output ready
+        if txt_filename.contains('basic') & name_count[1]==4:
+            txt_filename = 'Basic_input_'+str(name_count[0])
+            name_count[0]+=1
+        if txt_filename.contains('boundary') & name_count[3]==2:
+            txt_filename = 'Boundary_input_'+str(name_count[2])
+            name_count[2]+=1
+        if txt_filename.contains('corner') & name_count[5]==2:
+            txt_filename = 'Corner_input_'+str(name_count[4])
+            name_count[4]+=1
+        if txt_filename.contains('edge') & name_count[7]==2:
+            txt_filename = 'Edge_input_'+str(name_count[6])
+            name_count[6]+=1
+        
         if txt_filename == 'basic1':
             txt_filename = 'Basic_input_1'
         if txt_filename == 'basic2':
