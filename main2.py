@@ -102,44 +102,64 @@ def convert_doc_to_txt(input_dir, output_dir):
         
         if txt_filename == 'basic1':
             txt_filename = 'Basic_input_1'
+            name_count[0]+=1
         if txt_filename == 'basic2':
             txt_filename = 'Basic_input_2'
+            name_count[0]+=1
         if txt_filename == 'basic3':
             txt_filename = 'Basic_input_3'
+            name_count[0]+=1
         if txt_filename == 'basic4':
             txt_filename = 'Basic_input_4'
+            name_count[0]+=1
         if txt_filename == 'basic1_output':
             txt_filename = 'Basic_output_1'
+            name_count[1]+=1
         if txt_filename == 'basic2_output':
             txt_filename = 'Basic_output_2'
+            name_count[1]+=1
         if txt_filename == 'basic3_output':
             txt_filename = 'Basic_output_3'
+            name_count[1]+=1
         if txt_filename == 'basic4_output':
             txt_filename = 'Basic_output_4'
+            name_count[1]+=1
         if txt_filename == 'boundary1':
             txt_filename = 'Boundary_input_1'
+            name_count[2]+=1
         if txt_filename == 'boundary2':
             txt_filename = 'Boundary_input_2'
+            name_count[2]+=1
         if txt_filename == 'boundary1_output':
             txt_filename = 'Boundary_output_1'
+            name_count[3]+=1
         if txt_filename == 'boundary2_output':
             txt_filename = 'Boundary_output_2'
+            name_count[3]+=1
         if txt_filename == 'corner1':
             txt_filename = 'Corner_input_1'
+            name_count[4]+=1
         if txt_filename == 'corner2':
             txt_filename = 'Corner_input_2'
+            name_count[4]+=1
         if txt_filename == 'corner1_output':
             txt_filename = 'Corner_output_1'
+            name_count[5]+=1
         if txt_filename == 'corner2_output':
             txt_filename = 'Corner_output_2'
+            name_count[5]+=1
         if txt_filename == 'edge1':
             txt_filename = 'Edge_input_1'
+            name_count[6]+=1
         if txt_filename == 'edge2':
             txt_filename = 'Edge_input_2'
+            name_count[6]+=1
         if txt_filename == 'edge1_output':
             txt_filename = 'Edge_output_1'
+            name_count[7]+=1
         if txt_filename == 'edge2_output':
             txt_filename = 'Edge_output_2'
+            name_count[7]+=1
         if txt_filename == 'sample1':
             txt_filename = 'Sample_input_1'
         if txt_filename == 'sample2':
